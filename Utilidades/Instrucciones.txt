@@ -1,0 +1,21 @@
+Tareas antes de hacer la migración: 
+
+    Instalar los paquetes indicados en "requirements.txt":
+        pip install -r requirements.txt
+
+    Terminar de agregar las variables en el archivo ".env", con los parametros indicados 
+
+        ENGINE=django.db.backends.postgresql_psycopg2
+
+    Respaldo en caso de querer usar sqlite3:
+
+        # DATABASES = {
+        #     'default': {
+        #         'ENGINE': 'django.db.backends.sqlite3',
+        #         'NAME': BASE_DIR / 'db.sqlite3',
+        #     }
+        # }
+
+    En "base.py", agregar esta linea despues de crear el modelo de usuario:
+
+        AUTH_USER_MODEL = 'users.User'
